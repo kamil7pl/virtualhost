@@ -1,0 +1,16 @@
+<VirtualHost *:80>
+    ServerName blog.test
+        ServerAlias blog.test www.blog.test
+        DocumentRoot "C:\Users\kamil\Desktop\blog\public"
+
+        <Directory C:\Users\kamil\Desktop\blog\public>
+            Options Indexes FollowSymLinks
+            AllowOverride All
+            Require all granted
+        </Directory>
+
+        ErrorLog "logs/blog-test-error.log"
+        CustomLog "logs/blog-test-access.log" combined
+</VirtualHost>
+
+Add a domain in Windows.
